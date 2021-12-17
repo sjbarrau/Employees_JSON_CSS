@@ -1,0 +1,178 @@
+
+/* Texto general del documento */
+.myApp .sapMText  {
+    color: #32130C;
+}
+
+
+/* Background global externo */
+.sapMShellGlobalOuterBackground {
+    
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5afb9b201aef1d30544d39ca/1593672173918-8CTHFX9X0EGCJZKGOQJR/background.png?format=2500w);
+   
+}
+
+/* Background de la main page */
+.sapUiGlobalBackgroundColor {
+    background-image: url(https://www.designbolts.com/wp-content/uploads/2014/03/Light-Blue-blur-background1.jpg);
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 59%);
+   
+}
+
+/* Background de la profile page */
+.sapMPageBgStandard {
+    background-image: url(https://www.designbolts.com/wp-content/uploads/2014/03/Light-Blue-blur-background1.jpg);    
+}
+
+/* Color del headerde la profile page */
+.sapMIBar.sapMHeader-CTX {
+    
+    background-image: url(https://pixelify.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2020/06/20112726/runnerdesign_2020-3.jpg); 
+}
+
+
+
+/* Botones */
+
+.myApp .sapMBtnInner:hover {
+    background-color: #B0412B;
+}
+
+.myApp .sapMBtnHoverable {
+    background: #1c8849;
+}
+
+.myApp .sapMBtnDefault {
+    background: #B0412B;
+}
+
+.myApp .sapMBtnInner {
+    color: white;    
+}
+
+.myApp .sapMBtnIcon {
+    color: white; 
+}
+
+.colorChangeDelete {
+    color: #C84B31;
+}
+
+.colorChangeModify {
+    color: #2D4263
+}
+
+
+
+
+/* Selectores */
+
+.sapMSltPressed>.sapMSltArrow {
+    background: #c84b31;
+}
+
+.sapMSlt {
+    background: #fff8f68f;
+}
+
+.sapMSlt>.sapMSltArrow:hover  {
+    background-color: #c84b31;
+}
+
+.sapMSelectListItemBaseSelected {
+    background-color: #c84b31;
+    color: white;
+}
+
+.sapMSelectListItemBaseSelected:hover {
+    background-color: #c84a316b;
+    color: white;
+}
+
+.sapMSelectListItemBase:hover {
+    background-color: #ff61416b;
+}
+
+/* Tabla */
+
+/* .sapMScrollCont {
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 59%);
+}
+ */
+
+/* Row de la tabla con nombres de las columnas  */
+
+.sapMTableTH {
+    /* background: #C84B31; */
+    background-image: url(https://pixelify.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2020/06/20112726/runnerdesign_2020-3.jpg);  
+}
+
+.myApp .columnColor.sapMText  {
+    color: white;
+}
+
+.sapMLIB {
+    background: #fff8f68f;
+}
+
+.sapMLIB:hover {
+    background-color: #ffbdad83;
+}
+
+.sapMTBStandard {
+    border-bottom: solid 0.0625rem #d9d9d900;
+}
+
+
+/* Dialogo de new employee */
+
+.sapMDialog>.sapMDialogSection {
+    background-image: url(https://www.designbolts.com/wp-content/uploads/2014/03/Light-Blue-blur-background1.jpg);  
+}
+
+.sapMPopup-CTX .sapMIBar.sapMHeader-CTX {
+    background-image: url(https://pixelify.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2020/06/20112726/runnerdesign_2020-3.jpg);
+}
+
+.sapUiFormToolbar>div:first-child>.sapMTitle.sapMTitleStyleAuto {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.sapMDialog>header.sapMDialogTitle .sapMTitle {
+    color: white;
+}
+
+.sapMInputBaseContentWrapper {
+    background: #fff8f68f;
+}
+
+.sapMLabel {
+    color: #09121c;
+    font-weight: bold;
+}
+
+.sapMBtnInner {
+    background-color: #B0412B;
+    color: white;
+    border: 0.0625rem solid #B0412B;
+}
+
+.sapMBtnIcon {
+    color: white;
+}
+
+.sapMImg {
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 59%);    
+}
+
+
+/* Barra de scroll */
+
+html.sap-desktop:not(.sapUiNativeScrollbars) ::-webkit-scrollbar-thumb {
+    background-color: #230c035e;
+}
+
+html.sap-desktop:not(.sapUiNativeScrollbars) ::-webkit-scrollbar {
+    background-color: #fff0;
+}

@@ -1,0 +1,126 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+
+    <!-- Dialogo de creación de nuevos perfiles -->
+	<Dialog title="{i18n>NewEmployeeTitle}" id="newEmployee">
+		<content>
+			<VBox class="sapUiSmallMargin" width="500px" id="Vbox01">
+
+                <!-- Formulario con Inputs -->
+				<f:SimpleForm id="simpleForm">
+					<f:content>
+                       
+						<Label text="{i18n>Name}" required="true" id="nameLabel"/>
+						<Input 
+                         
+                        name="employee_name" 
+                        id="nameInput"
+                        type="Text"
+                        value="{ 
+                                  path : '/employee_name', 
+                                  type : 'sap.ui.model.type.String', 
+                                  constraints : { 
+                                      minLength : 3, 
+                                      maxLength : 50 
+                                  }
+                              }"
+                        
+                        />
+                        
+						<Label text="{i18n>Location}" required="true" id="locationLabel"/>
+						<Select
+						id="locationInput"
+						forceSelection="false"
+                        name="location_ID"
+                        selectedKey="{ 
+                            path : '/location_ID', 
+                            type : 'sap.ui.model.type.Integer', 
+                            constraints : { 
+                                minimum : 1 
+                            }
+                        }"
+						items="{
+                                path: 'jsonModel>/EntityLocations'
+                                 }">
+							<core:Item key="{jsonModel>ID}" text="{jsonModel>city}" id="locationItems"/>
+						</Select>
+
+                        <!-- Selectores con las categorias extraidas del OData -->
+						<Label text="{i18n>Category}" required="true" id="categoryLabel"/>
+						<Select
+						id="categoryInput"
+						forceSelection="false"
+                        name="category_ID"
+                        selectedKey="{ 
+                            path : '/category_ID', 
+                            type : 'sap.ui.model.type.Integer', 
+                            constraints : { 
+                                minimum : 1 
+                            }
+                        }"
+						items="{
+                                path: 'jsonModel>/EntityCategories'
+                                }">
+							<core:Item key="{jsonModel>ID}" text="{jsonModel>name}" id="categoryItems"/>
+						</Select>
+
+						<Label text="{i18n>Photo}" required="true" id="photoLabel"/>
+						<Input 
+                        type="Text" 
+                        name="profile_image" 
+                        id="photoInput"
+                        placeholder="Insert a valid URL"
+                        value="{ 
+                                  path : '/profile_image', 
+                                  type : 'sap.ui.model.type.String', 
+                                  constraints : { 
+                                      minLength : 3, 
+                                      maxLength : 500 
+                                  }
+                              }"/>
+
+						<Label text="{i18n>Age}" required="true" id="ageLabel"/>
+						<Input 
+                        name="employee_age" 
+                        id="ageInput"
+                        value="{ 
+                                  path : '/employee_age', 
+                                  type : 'sap.ui.model.type.Integer', 
+                                  constraints : { 
+                                      minimum : 18, 
+                                      maximum : 99 
+                                  }
+                              }"/>
+
+						<Label text="{i18n>Salary}" required="true" id="salaryLabel"/>
+						<Input 
+                        name="employee_salary" 
+                        id="salaryInput"
+                        value="{ 
+                                  path : '/employee_salary', 
+                                  type : 'sap.ui.model.type.Integer',
+                                  constraints : { 
+                                      minimum : 50, 
+                                      maximum : 10000000 
+                                  }
+                              }"/>
+					</f:content>
+				</f:SimpleForm>
+                
+                <!-- Botones con acciones guardar y cancelar -->
+				<FlexBox
+				height="100px"
+				alignItems="End"
+				justifyContent="End"
+                id="fBoxButtons">
+					<Button text="{i18n>SaveButton}" press="onAddNewEmployee" class="sapUiSmallMarginEnd" icon="sap-icon://save" id="saveButton"/>
+					<Button text="{i18n>CancelButton}" press="onCloseDialog" class="sapUiSmallMarginEnd" id="cancelButton"/>
+				</FlexBox>
+			</VBox>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>
